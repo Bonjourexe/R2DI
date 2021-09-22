@@ -6,6 +6,7 @@ Bot en Node.js pour le serveur des DI du CESI d'Aix-en-Provence
 - [ ] accueillir les nouveaux arrivants sur le serveur avec un message
 - [ ] permettre à l'utilisateur de se donner le rôle `étudiant`, `alternant` ou `intervenant` à l'aide des réactions sur le message d'accueil ou d'une commande
 - [ ] permettre à l'utilisateur d'avoir le nom de son entreprise indiqué grâce à un rôle créé à la volée
+- [ ] une commande qui génère un code QR à usage unique pour inviter plus facilement de nouveaux membres (notamment intervenants)
 - [ ] (une commande "carte d'identité" pour avoir les informations d'un autre utilisateur)
 ### Informations
 - [ ] envoyer un message chaque soir qui annonce les cours du lendemain, les horaires, l'intervenant et si possible la salle
