@@ -2,9 +2,9 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName('ping')
-		.setDescription('Répond avec Pong!'),
+		.setName('timestamp')
+		.setDescription("Répond avec le timestamp (en ms)"),
 	async execute(interaction) {
-		await interaction.reply('Pong!');
+		await interaction.reply(""+new Date().valueOf());
 	},
 };
