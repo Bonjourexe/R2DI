@@ -3,7 +3,7 @@ const fs = require('fs');
 const { Client, Collection, Intents } = require('discord.js');
 const { token, DBinfo } = require('./config.json');
 var mysql = require('mysql');
-var con = mysql.createConnection({
+con = mysql.createConnection({
 	host: DBinfo.host,
 	user: DBinfo.user,
 	password: DBinfo.password,
