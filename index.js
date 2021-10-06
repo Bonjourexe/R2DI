@@ -18,7 +18,6 @@ con.connect(function(err) {
 	})
 });
 
-
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
 client.commands = new Collection();
