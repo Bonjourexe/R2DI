@@ -12,6 +12,7 @@ Bot en Node.js pour le serveur des DI du CESI d'Aix-en-Provence
 - [ ] envoyer un message chaque soir qui annonce les cours du lendemain, les horaires, l'intervenant et si possible la salle
 - [ ] envoyer un message chaque soir qui annonce la météo du lendemain
 - [ ] envoyer une alerte quand il pleut/neige ou qu'il y a de l'orage
+- [ ] relayer les alertes Météofrance
 - [ ] (une commande pour avoir la météo d'un endroit spécifié)
 - [ ] (un système d'alerte pour les lignes d'Aixenbus.fr)
 - [ ] (possibilité d'ajouter des flux RSS à rediriger vers un salon choisi du serveur)
@@ -21,6 +22,7 @@ Bot en Node.js pour le serveur des DI du CESI d'Aix-en-Provence
 - [ ] le rôle est remplacé lorsqu'on a trouvé un groupe par un rôle qui indique si le groupe est complet ou non
 - [ ] une commande qui permet d'obtenir la liste des groupes et de savoir qui est disponible
 - [ ] envoyer régulièrement des alertes de temps restant pour les projets en cours (par exemple 50% du temps, 2 et 1 semaine, 3, 2 et 1 jours)
+- [ ] afficher le nom du projet et le temps restant en présence du bot
 ### Révisions
 - [ ] un système de quizz (peut-être en MP pour pas flood le serveur)
 - [ ] une commande pour soumettre des questions
