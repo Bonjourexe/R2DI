@@ -1,6 +1,7 @@
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { weatherT } = require('../config.json');
+const { generateImage } = require('../generate-image.js');
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -20,7 +21,13 @@ module.exports = {
 			.then((json) => {
 				console.log(json);
 				//interaction.reply(JSON.stringify(json)+"\nMétéo pour "+json.name+", :flag_"+json.sys.country.toLowerCase()+":");
-				interaction.reply(JSON.stringify(json.list[8]) + "\n"+json.city.name + ", :flag_"+json.city.country.toLowerCase()+":");
+				if (json.cod == 200) {
+					interaction.reply(JSON.stringify(json.list[8]) + "\n"+json.city.name + ", :flag_"+json.city.country.toLowerCase()+":");
+					generateImage(json.city.name, interaction.channel.id);
+				}
+				else {
+					interaction.reply({ content: `Une erreur s'est produite (${json.cod+" : "+json.message}).`, ephemeral: true });
+				}
 				//let report = JSON.parse(json);
 				console.log(json.cod);
 		});

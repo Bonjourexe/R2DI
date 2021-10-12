@@ -2,6 +2,7 @@
 const fs = require('fs');
 const { Client, Collection, Intents } = require('discord.js');
 const { token, DBinfo } = require('./config.json');
+
 var mysql = require('mysql');
 con = mysql.createConnection({
 	host: DBinfo.host,
@@ -12,13 +13,9 @@ con = mysql.createConnection({
 con.connect(function(err) {
 	if (err) throw err;
 	console.log("Connected!");
-	con.query("SELECT * FROM Test;", function (err, result, fields) {
-		if (err) throw err;
-		console.log(result);
-	})
 });
 
-const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
+client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
 client.commands = new Collection();
 

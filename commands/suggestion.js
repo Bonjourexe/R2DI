@@ -9,14 +9,14 @@ module.exports = {
 				.setDescription('Texte qui sera enregistré et consultable par tous')),
 	async execute(interaction) {
 		if (interaction.options.data[0]) {
-			var post = { id: null, text:interaction.options.data[0].value};
-			await con.query("INSERT INTO Test SET ?", post, function (err, result, fields) {
+			var post = { id: null, user:interaction.user, suggestion:interaction.options.data[0].value};
+			await con.query("INSERT INTO suggestions SET ?", post, function (err, result, fields) {
 				if (err) throw err;
 				console.log(result);
 				interaction.reply(JSON.stringify(result));
 		})}
 		else {
-			await con.query("SELECT * FROM Test;", function (err, result, fields) {
+			await con.query("SELECT * FROM suggestions;", function (err, result, fields) {
 				if (err) throw err;
 				console.log(result);
 				interaction.reply(JSON.stringify(result));
